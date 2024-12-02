@@ -1,5 +1,6 @@
 plugins {
-    id("java")
+    //id("java")
+    application
 }
 
 group = "hexlet.code"
@@ -16,4 +17,17 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+//application {
+//    // Входная точка
+//    mainClass.set("hexlet.code.App")
+//}
+
+tasks.jar {
+    manifest {
+        attributes(
+            "Main-Class" to "hexlet.code.App"
+        )
+    }
 }
