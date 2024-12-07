@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b132628c-4fba-498b-99a3-6a38a8f9837d" name="Changes" comment="step 2: Compilation &amp; Build v2">
+    <list default="true" id="b132628c-4fba-498b-99a3-6a38a8f9837d" name="Changes" comment="step 3: new Cli with Scaner">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/Cli.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/hexlet/code/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/hexlet/code/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,12 +63,24 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="distribution" type="c8890929:TasksNode$1" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="java-package" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
             </expand>
             <select />
           </tree_state>
         </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Rebase.Settings">
     <option name="NEW_BASE" value="main" />
@@ -101,6 +117,9 @@
     &quot;accountId&quot;: &quot;f92cb125-7bc7-42b6-88dc-3c0d1b89b782&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -109,49 +128,63 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Building Gradle Dependencies.executor": "Run",
-    "Gradle.app [assembleDist].executor": "Run",
-    "Gradle.app [build].executor": "Run",
-    "Gradle.app [clean].executor": "Run",
-    "Gradle.app [init].executor": "Run",
-    "Gradle.app [installDist].executor": "Run",
-    "Gradle.app [run].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/DEV/GIT/java-project-61",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.AppTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AppTest.testMain.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build app.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Building Gradle Dependencies.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.app [:hexlet.code.App.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.app [assembleDist].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.app [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.app [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.app [init].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.app [installDist].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.app [run].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.app [testClasses].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.app [wrapper].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/DEV/GIT/java-project-61/app/src/main/java/hexlet/code&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/DEV/GIT/java-project-61&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Gradle.app [assembleDist]">
-    <configuration name="app [assembleDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="hexlet.code" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.app [build]">
+    <configuration name="AppTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="assembleDist" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;hexlet.code.AppTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="app [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -159,35 +192,13 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="--scan" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
             <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="app [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -242,13 +253,35 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="app [testClasses]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="testClasses" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.app [assembleDist]" />
-        <item itemvalue="Gradle.app [installDist]" />
         <item itemvalue="Gradle.app [build]" />
-        <item itemvalue="Gradle.app [clean]" />
+        <item itemvalue="Gradle.app [testClasses]" />
+        <item itemvalue="Gradle.AppTest" />
         <item itemvalue="Gradle.app [run]" />
+        <item itemvalue="Gradle.AppTest" />
       </list>
     </recent_temporary>
   </component>
@@ -269,7 +302,7 @@
       <option name="presentableId" value="Default" />
       <updated>1733563691456</updated>
       <workItem from="1733563692559" duration="3329000" />
-      <workItem from="1733568543741" duration="3445000" />
+      <workItem from="1733568543741" duration="13295000" />
     </task>
     <task id="LOCAL-00001" summary="step 2: Compilation &amp; Build v2">
       <option name="closed" value="true" />
@@ -316,7 +349,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/hexlet-java-app-template" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -330,6 +363,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="step 2: Compilation &amp; Build v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="step 2: Compilation &amp; Build v2" />
+    <MESSAGE value="tasks.jar manifest attributes" />
+    <MESSAGE value="step 3: new Cli with Scaner" />
+    <option name="LAST_COMMIT_MESSAGE" value="step 3: new Cli with Scaner" />
   </component>
 </project>
