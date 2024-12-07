@@ -35,5 +35,12 @@ tasks.test {
         showStandardStreams = true
     }
 }
+tasks.jar {
+    manifest {
+        attributes(
+            "Main-Class" to "hexlet.code.App"
+        )
+    }
+}
 
 tasks.jacocoTestReport { reports { xml.required.set(true) } }

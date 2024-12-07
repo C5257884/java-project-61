@@ -1,0 +1,23 @@
+Index: app/build.gradle.kts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import org.gradle.api.tasks.testing.logging.TestExceptionFormat\r\nimport org.gradle.api.tasks.testing.logging.TestLogEvent\r\n\r\nplugins {\r\n    application\r\n    jacoco\r\n    id(\"checkstyle\")\r\n    id(\"io.freefair.lombok\") version \"8.6\"\r\n    id(\"com.github.ben-manes.versions\") version \"0.50.0\"\r\n    id(\"com.github.johnrengelman.shadow\") version \"8.1.1\"\r\n}\r\n\r\ngroup = \"hexlet.code\"\r\nversion = \"1.0-SNAPSHOT\"\r\n\r\napplication { mainClass.set(\"hexlet.code.App\") }\r\n\r\nrepositories { mavenCentral() }\r\n\r\ndependencies {\r\n    implementation(\"org.apache.commons:commons-lang3:3.14.0\")\r\n    implementation(\"org.apache.commons:commons-collections4:4.4\")\r\n    testImplementation(platform(\"org.junit:junit-bom:5.10.1\"))\r\n    testImplementation(\"org.junit.jupiter:junit-jupiter\")\r\n}\r\n\r\ntasks.test {\r\n    useJUnitPlatform()\r\n    // https://technology.lastminute.com/junit5-kotlin-and-gradle-dsl/\r\n    testLogging {\r\n        exceptionFormat = TestExceptionFormat.FULL\r\n        events = mutableSetOf(TestLogEvent.FAILED, TestLogEvent.PASSED, TestLogEvent.SKIPPED)\r\n        // showStackTraces = true\r\n        // showCauses = true\r\n        showStandardStreams = true\r\n    }\r\n}\r\n\r\ntasks.jacocoTestReport { reports { xml.required.set(true) } }\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle.kts b/app/build.gradle.kts
+--- a/app/build.gradle.kts	(revision 144e28d4788e79a50bcae187ea81b828a275ba2b)
++++ b/app/build.gradle.kts	(date 1733568820672)
+@@ -37,3 +37,11 @@
+ }
+ 
+ tasks.jacocoTestReport { reports { xml.required.set(true) } }
++
++tasks.jar {
++    manifest {
++        attributes(
++            "Main-Class" to "hexlet.code.App"
++        )
++    }
++}
+\ No newline at end of file
