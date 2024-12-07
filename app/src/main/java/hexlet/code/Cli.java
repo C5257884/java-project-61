@@ -7,7 +7,7 @@ public class Cli {
     public static String getUserName(String question) {
         Scanner input = new Scanner(System.in);
 
-        System.out.print(question+" ");
+        System.out.print(question + " ");
 
         try {
             return input.nextLine();
