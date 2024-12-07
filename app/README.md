@@ -46,6 +46,7 @@ make update
 
 On *nix and macOS to manage Java versions we recommend using asdf https://github.com/asdf-vm/asdf. 
 
+<a href="https://codeclimate.com/github/C5257884/java-project-61/maintainability"><img src="https://api.codeclimate.com/v1/badges/746d55b7818b14290a2a/maintainability" /></a>
    
 [![Hexlet Ltd. logo](https://raw.githubusercontent.com/Hexlet/assets/master/images/hexlet_logo128.png)](https://hexlet.io/?utm_source=github&utm_medium=link&utm_campaign=java-package)
 

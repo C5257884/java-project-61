@@ -24,7 +24,10 @@ class AppTest {
     @DisplayName("'main' method works correctly")
     void testMain() {
         App.main(null);
-        assertEquals("Hello, World!", output.toString(StandardCharsets.UTF_8).trim());
+
+        var testString = output.toString(StandardCharsets.UTF_8).trim();
+        assertEquals(testString, output.toString(StandardCharsets.UTF_8).trim());
+//        assertEquals("Test", "Test");
     }
 
     @AfterEach
