@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b132628c-4fba-498b-99a3-6a38a8f9837d" name="Changes" comment="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;app/src/main/java/hexlet/code/Cli.java">
+    <list default="true" id="b132628c-4fba-498b-99a3-6a38a8f9837d" name="Changes" comment="Step 4: Add badge from https://codeclimate.com/">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/java-package.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/java-package.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/AbstractGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/evenCheckGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/exitGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/Cli.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/Cli.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +72,20 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="java-package" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="documentation" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="java-package" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="help" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="java-package" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -74,6 +97,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -124,35 +148,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.AppTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AppTest.testMain.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build app.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Building Gradle Dependencies.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.app [:hexlet.code.App.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.app [assembleDist].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.app [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.app [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.app [init].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.app [installDist].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.app [run].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.app [testClasses].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.app [wrapper].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/DEV/GIT/java-project-61/app/src/main/java/hexlet/code&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/DEV/GIT/java-project-61&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.AppTest.executor": "Run",
+    "Gradle.AppTest.testMain.executor": "Run",
+    "Gradle.Build app.executor": "Run",
+    "Gradle.Building Gradle Dependencies.executor": "Run",
+    "Gradle.app [:hexlet.code.App.main()].executor": "Run",
+    "Gradle.app [assembleDist].executor": "Run",
+    "Gradle.app [build].executor": "Run",
+    "Gradle.app [checkstyleMain].executor": "Run",
+    "Gradle.app [clean].executor": "Run",
+    "Gradle.app [init].executor": "Run",
+    "Gradle.app [installDist].executor": "Run",
+    "Gradle.app [jar].executor": "Run",
+    "Gradle.app [run].executor": "Run",
+    "Gradle.app [testClasses].executor": "Run",
+    "Gradle.app [wrapper].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/DEV/GIT/java-project-61/app/src/main/java/hexlet/code",
+    "last_opened_file_path": "C:/DEV/GIT/java-project-61",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="hexlet.code" />
@@ -205,7 +232,7 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="app [installDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="app [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
@@ -216,7 +243,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="installDist" />
+            <option value="jar" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -274,10 +301,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.app [build]" />
+        <item itemvalue="Gradle.app [jar]" />
         <item itemvalue="Gradle.app [testClasses]" />
         <item itemvalue="Gradle.AppTest" />
         <item itemvalue="Gradle.app [run]" />
-        <item itemvalue="Gradle.AppTest" />
       </list>
     </recent_temporary>
   </component>
@@ -299,6 +326,7 @@
       <updated>1733563691456</updated>
       <workItem from="1733563692559" duration="3329000" />
       <workItem from="1733568543741" duration="13295000" />
+      <workItem from="1733676902300" duration="8118000" />
     </task>
     <task id="LOCAL-00001" summary="step 2: Compilation &amp; Build v2">
       <option name="closed" value="true" />
@@ -332,7 +360,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733586928666</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;app/src/main/java/hexlet/code/Cli.java">
+      <option name="closed" value="true" />
+      <created>1733587396044</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733587396044</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Step 4: Add badge from https://codeclimate.com/">
+      <option name="closed" value="true" />
+      <created>1733588193392</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733588193392</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,6 +431,7 @@
     <MESSAGE value="step 4: README.md changed" />
     <MESSAGE value="step 3: new Cli with Scaner" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;app/src/main/java/hexlet/code/Cli.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;app/src/main/java/hexlet/code/Cli.java" />
+    <MESSAGE value="Step 4: Add badge from https://codeclimate.com/" />
+    <option name="LAST_COMMIT_MESSAGE" value="Step 4: Add badge from https://codeclimate.com/" />
   </component>
 </project>

@@ -18,4 +18,17 @@ public class Cli {
 
     }
 
+    public static int inputGameNumber(String question) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print(question + " ");
+
+        try {
+            return input.nextInt();
+        } catch (NoSuchElementException e) {
+//            throw new RuntimeException(e);
+            return 0;
+        }
+
+    }
 }
