@@ -8,6 +8,8 @@ public class ExitGame extends AbstractGame {
     @Override
     public void play() {
 //        super.play();
+        System.out.println("My index: " + index + " my title: " + title);
+
         System.exit(0);
     }
 }

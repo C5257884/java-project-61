@@ -5,19 +5,32 @@ public class App {
     public static final String CHOICE_MSG = "Your choice: ";
 
     public static void main(String[] args) {
-        Game[] gamesList = {
-            new EvenCheckGame(1),
-            new ExitGame(0)
-        };
 
-        // Displays a list of games for user selection
-        for (Game game : gamesList) {
-            game.outDescription();
-        }
+//        // Creating massive wih games
+//        Game[] gamesList = {
+//                {1, new Greet(1)},
+//                {2, new EvenCheckGame(2)},
+//                {0, new ExitGame(0)}
+//        };
+//
+//        // Display a list of games for user selection
+//        for (Game game : gamesList) {
+//            game.outDescription();
+//        }
 
-        var index = Cli.inputGameNumber(CHOICE_MSG);
+        Menu menu = new Menu(
+            new MenuItem[] {
+                new MenuItem(1, new Greet(1)),
+                new MenuItem(2, new EvenCheckGame(2)),
+                new MenuItem(3, new ExitGame(0))
+            });
+        menu.showItems();
 
-        gamesList[index].play();
+        menu.getItem().game.play();
+
+//        var index = Cli.inputGameNumber(CHOICE_MSG);
+
+//        gamesList[index].play();
 
     }
 }
