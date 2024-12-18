@@ -5,7 +5,7 @@ public class CalculatorGame extends Greet {
 
 
     CalculatorGame(int gameHotPoint) {
-        super(gameHotPoint, "Calculator");
+        super(gameHotPoint, "Calc");
     }
 
     @Override
