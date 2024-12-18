@@ -53,3 +53,5 @@ This repository is created and maintained by the team and the community of Hexle
 See most active contributors on [hexlet-friends](https://friends.hexlet.io/).
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/746d55b7818b14290a2a/maintainability)](https://codeclimate.com/github/C5257884/java-project-61/maintainability)
+
+https://asciinema.org/a/KM7ereDKdxOQjowhEdRkXc5Bu

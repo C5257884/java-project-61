@@ -1,21 +1,27 @@
 package hexlet.code;
 
 abstract class AbstractGame implements Game {
-    protected int index;
+    protected final int gameHotPoint;
     protected String title;
+    protected String userName;
 
-    AbstractGame(int index, String title) {
-        this.index = index;
+    AbstractGame(int gameHotPoint, String title) {
+        this.gameHotPoint = gameHotPoint;
         this.title = title;
     }
 
     @Override
     public void outDescription() {
-        System.out.println(index + " - " + title);
+        System.out.println(gameHotPoint + " - " + title);
     }
 
     @Override
     public void play() {
-        return;
+        System.out.println("My index: " + gameHotPoint + " my title: " + title); // ##TODO debug mode
+    }
+
+    @Override
+    public int getHotPoint() {
+        return gameHotPoint;
     }
 }

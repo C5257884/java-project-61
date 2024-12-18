@@ -4,5 +4,5 @@ public interface Game {
 
     void outDescription();
     void play();
-
+    int getHotPoint();
 }

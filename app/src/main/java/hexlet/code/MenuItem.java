@@ -1,11 +1,11 @@
 package hexlet.code;
 
 public class MenuItem {
-    protected Integer key;
+    protected Integer screenPosition;
     public final Game game;
 
-    MenuItem(Integer key, Game game) {
-        this.key = key;
+    MenuItem(Integer screenPosition, Game game) {
+        this.screenPosition = screenPosition;
         this.game = game;
     }
 }
