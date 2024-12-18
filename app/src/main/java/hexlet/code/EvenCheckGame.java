@@ -1,7 +1,5 @@
 package hexlet.code;
 
-import java.util.Random;
-
 public class EvenCheckGame extends Greet {
     private static final int MAX_VALUE = 100;
     private static final int CORRECT_ANSWERS_THRESHOLD = 3;
@@ -30,8 +28,6 @@ public class EvenCheckGame extends Greet {
         super.play();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
-        Random rand = new Random();
-
         var trueAnswerCount = 0;
         String answer;
         String correctAnswer;
@@ -42,22 +38,17 @@ public class EvenCheckGame extends Greet {
             System.out.println("Question: " + number);
 
             answer = Cli.getUserName("Your answer (yes/no): ");
-
             correctAnswer = (number % 2 == 0) ? "yes" : "no";
 
             if (answer.equals(correctAnswer)) {
                 trueAnswerCount++;
                 System.out.println("Correct!");
             } else {
-                var info = "'" + answer + "' is wrong answer ;(. Correct answer was '" + correctAnswer
-                    + "'\nLet's try again, " + userName + "!";
-                System.out.println(info);
                 trueAnswerCount = 0;
+                break;
             }
-        } while (trueAnswerCount < CORRECT_ANSWERS_THRESHOLD && answer.equals(correctAnswer));
+        } while (trueAnswerCount < CORRECT_ANSWERS_THRESHOLD);
 
-        if (trueAnswerCount == CORRECT_ANSWERS_THRESHOLD) {
-            System.out.println("Congratulations, " + userName + "!");
-        }
+        endGameFlow(trueAnswerCount, answer, correctAnswer);
     }
 }

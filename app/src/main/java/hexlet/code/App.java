@@ -8,7 +8,8 @@ public class App {
             new MenuItem[] {
                 new MenuItem(0, new Greet(1)),
                 new MenuItem(1, new EvenCheckGame(2)),
-                new MenuItem(2, new ExitGame(0))
+                new MenuItem(2, new CalculatorGame(3)),
+                new MenuItem(3, new ExitGame(0))
             });
 
         var nextStepLoop = true;
