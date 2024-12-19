@@ -11,8 +11,8 @@ public class App {
                 new MenuItem(2, new CalculatorGame(3)),
                 new MenuItem(3, new GCDGame(4)),
                 new MenuItem(4, new ProgressionGame(5)),
-//                new MenuItem(5, new ..............Game(5)),
-                new MenuItem(5, new ExitGame(0))
+                new MenuItem(5, new PrimeNumberGame(6)),
+                new MenuItem(6, new ExitGame(0))
             });
 
         var nextStepLoop = true;

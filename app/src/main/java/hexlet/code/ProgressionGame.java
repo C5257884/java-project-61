@@ -5,7 +5,7 @@ import java.util.Random;
 public class ProgressionGame extends Greet {
     private static final int LENGTH_OF_PROGRESSION = 10;
 
-    private class ArithmeticProgression {
+    private static class ArithmeticProgression {
         private static final int MAX_VALUE = 10;
         private final int firstMember;
         private final int commonDifference;
@@ -53,7 +53,6 @@ public class ProgressionGame extends Greet {
         int actMissMemberOfProgression;
         int lengthOfProgression;
         int indexOfMissMember;
-
 
         do {
             lengthOfProgression = LENGTH_OF_PROGRESSION;

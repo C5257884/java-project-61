@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b132628c-4fba-498b-99a3-6a38a8f9837d" name="Changes" comment="Step 6: the step is almost complete, it remains to finish writing tests for converting String - int">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/GCDGame.java" afterDir="false" />
+    <list default="true" id="b132628c-4fba-498b-99a3-6a38a8f9837d" name="Changes" comment="Step 9: the step &quot;Prime number&quot; is completed">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/PrimeNumberGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/hexlet/code/PrimeNumberGameTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/ProgressionGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/ProgressionGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/hexlet/code/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/hexlet/code/MenuTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/hexlet/code/MenuTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,6 +157,7 @@
     "Gradle.AppTest.testMain.executor": "Run",
     "Gradle.Build app.executor": "Run",
     "Gradle.Building Gradle Dependencies.executor": "Run",
+    "Gradle.PrimeNumberGameTest.executor": "Run",
     "Gradle.app [:hexlet.code.App.main()].executor": "Run",
     "Gradle.app [assembleDist].executor": "Run",
     "Gradle.app [build].executor": "Run",
@@ -167,6 +173,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers": "true",
     "extract.method.default.visibility": "protected",
     "git-widget-placeholder": "2-arrays-to-get-menuItem",
     "kotlin-language-version-configured": "true",
@@ -195,7 +202,31 @@
       <recent name="hexlet.code" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.app [run]">
+  <component name="RunManager" selected="Gradle.app [build]">
+    <configuration name="PrimeNumberGameTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;hexlet.code.PrimeNumberGameTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="app [assembleDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -230,28 +261,6 @@
         <option name="taskNames">
           <list>
             <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="app [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -308,11 +317,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.app [run]" />
         <item itemvalue="Gradle.app [build]" />
+        <item itemvalue="Gradle.PrimeNumberGameTest" />
+        <item itemvalue="Gradle.app [run]" />
         <item itemvalue="Gradle.app [installDist]" />
         <item itemvalue="Gradle.app [assembleDist]" />
-        <item itemvalue="Gradle.app [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -342,7 +351,7 @@
       <workItem from="1734107742496" duration="6096000" />
       <workItem from="1734276825983" duration="24086000" />
       <workItem from="1734450983011" duration="10790000" />
-      <workItem from="1734528860127" duration="13583000" />
+      <workItem from="1734528860127" duration="35986000" />
     </task>
     <task id="LOCAL-00001" summary="step 2: Compilation &amp; Build v2">
       <option name="closed" value="true" />
@@ -416,7 +425,23 @@
       <option name="project" value="LOCAL" />
       <updated>1734547431526</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Step 7: the step is complete">
+      <option name="closed" value="true" />
+      <created>1734552550638</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1734552550638</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Step 8: the step &quot;Progression&quot; is complete">
+      <option name="closed" value="true" />
+      <created>1734605729613</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1734605729613</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,7 +478,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="2-arrays-to-get-menuItem" />
                       </list>
                     </value>
                   </entry>
@@ -475,43 +500,13 @@
     <MESSAGE value="Step 5: even check game added" />
     <MESSAGE value="Step 5: asciinema added, step completed" />
     <MESSAGE value="Step 6: the step is almost complete, it remains to finish writing tests for converting String - int" />
-    <option name="LAST_COMMIT_MESSAGE" value="Step 6: the step is almost complete, it remains to finish writing tests for converting String - int" />
+    <MESSAGE value="Step 7: the step is complete" />
+    <MESSAGE value="Step 8: the step is complete" />
+    <MESSAGE value="Step 8: the step &quot;Progression&quot; is complete" />
+    <MESSAGE value="Step 9: the step &quot;Prime number&quot; is completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Step 9: the step &quot;Prime number&quot; is completed" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/test/java/hexlet/code/AppTest.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/test/java/hexlet/code/AppTest.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/test/java/hexlet/code/AppTest.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/test/java/hexlet/code/AppTest.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/test/java/hexlet/code/AppTest.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/test/java/hexlet/code/AppTest.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="hexlet.code.Menu" memberName="menuItems" />

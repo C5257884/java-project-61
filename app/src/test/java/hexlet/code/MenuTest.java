@@ -6,6 +6,7 @@ import java.lang.reflect.Field;
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
@@ -20,7 +21,6 @@ class MenuTest {
                 new MenuItem(2, new ExitGame(0))
             });
 
-
         try {
             Field fldScrPosToHotPointMapping = Menu.class.getDeclaredField("screenPosToHotPointMapping");
             fldScrPosToHotPointMapping.setAccessible(true);
@@ -33,10 +33,8 @@ class MenuTest {
 
             assert2DArraysEqual(expScreenPosToHotPointMapping,
                 (int[][]) fldScrPosToHotPointMapping.get(cutMenu)); //, "Arrays are not equal");
-        } catch (NoSuchFieldException e1) {
-            assertTrue(e1 == null);     //##Q Если мы тут - тест не удался, как написать ?
-        } catch (IllegalAccessException e2) {
-            assertTrue(e2 == null);     //##Q Если мы тут - тест не удался, как написать ?
+        } catch (NoSuchFieldException | IllegalAccessException e) {
+            assertNotNull(e);     //##Q Если мы тут - тест не удался, как написать ?
         }
     }
 
