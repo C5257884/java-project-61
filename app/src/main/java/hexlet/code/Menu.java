@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Menu {
-    public static final String MENU_TITLE = "\nYou can play these games:";
+    public static final String MENU_TITLE = "Please enter the game number and press Enter.";
     public static final String CHOICE_MSG = "Your choice: ";
     // Сопоставление номера игры (пользовательский ввод) - объекту "Игра"
     private final Map<Integer, MenuItem> menuItems;

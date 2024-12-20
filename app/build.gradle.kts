@@ -2,7 +2,7 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 plugins {
-    id("java")
+//    id("java")
     application
     jacoco
     id("checkstyle")
@@ -14,9 +14,7 @@ plugins {
 group = "hexlet.code"
 version = "1.0-SNAPSHOT"
 
-application {
-    mainClass = "hexlet.code.App"
-}
+application { mainClass.set("hexlet.code.App") }
 
 repositories { mavenCentral() }
 
