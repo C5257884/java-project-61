@@ -6,4 +6,4 @@
  * This project uses @Incubating APIs which are subject to change.
  */
 
-rootProject.name = "Brain Games"
+rootProject.name = "BrainGames"

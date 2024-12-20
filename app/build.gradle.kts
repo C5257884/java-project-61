@@ -2,7 +2,7 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 plugins {
-//    id("java")
+    id("java")
     application
     jacoco
     id("checkstyle")
@@ -37,13 +37,13 @@ tasks.test {
     }
 }
 
-//tasks.jar {
-//    manifest {
-//        attributes(
-//            "Main-Class" to "hexlet.code.App"
-//        )
-//    }
-//}
+tasks.jar {
+    manifest {
+        attributes(
+            "Main-Class" to "hexlet.code.App"
+        )
+    }
+}
 
 tasks.getByName("run", JavaExec::class) {
     standardInput = System.`in`
