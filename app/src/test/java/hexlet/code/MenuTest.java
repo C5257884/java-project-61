@@ -1,5 +1,8 @@
 package hexlet.code;
 
+import hexlet.code.game.EvenCheckGame;
+import hexlet.code.game.ExitGame;
+import hexlet.code.game.Greet;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Field;

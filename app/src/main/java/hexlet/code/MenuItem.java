@@ -1,5 +1,7 @@
 package hexlet.code;
 
+import hexlet.code.game.Game;
+
 public class MenuItem {
     protected Integer screenPosition;
     public final Game game;

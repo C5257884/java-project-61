@@ -1,5 +1,13 @@
 package hexlet.code;
 
+import hexlet.code.game.CalculatorGame;
+import hexlet.code.game.EvenCheckGame;
+import hexlet.code.game.ExitGame;
+import hexlet.code.game.GCDGame;
+import hexlet.code.game.Greet;
+import hexlet.code.game.PrimeNumberGame;
+import hexlet.code.game.ProgressionGame;
+
 public class App {
 
     public static void main(String[] args) {

@@ -1,10 +1,12 @@
-package hexlet.code;
+package hexlet.code.game;
+
+import hexlet.code.Cli;
 
 public class CalculatorGame extends Greet {
     private static final int MAX_VALUE = 100;
 
 
-    CalculatorGame(int gameHotPoint) {
+    public CalculatorGame(int gameHotPoint) {
         super(gameHotPoint, "Calc");
     }
 
@@ -39,7 +41,7 @@ public class CalculatorGame extends Greet {
             String operation = getOperation(rand.nextInt(3));
             System.out.println("Question: " + operand1 + " " + operation + " " + operand2);
 
-            answer = Cli.getUserName("Your answer: ");
+            answer = Cli.inputString("Your answer: ");
             correctAnswer = eval(operand1, operand2, operation);
 
             if (answer.equals(correctAnswer)) {

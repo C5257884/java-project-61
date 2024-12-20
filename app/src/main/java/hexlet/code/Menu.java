@@ -7,9 +7,9 @@ public class Menu {
     public static final String MENU_TITLE = "\nYou can play these games:";
     public static final String CHOICE_MSG = "Your choice: ";
     // Сопоставление номера игры (пользовательский ввод) - объекту "Игра"
-    private Map<Integer, MenuItem> menuItems;
+    private final Map<Integer, MenuItem> menuItems;
     // Сопоставление порядкового номера строки меню на экране - номеру игры (пользовательский ввод)
-    private int[][] screenPosToHotPointMapping;
+    private final int[][] screenPosToHotPointMapping;
 
     public Menu(MenuItem[] items) {
 
@@ -24,8 +24,9 @@ public class Menu {
     }
 
     public void showItems() {
+
         System.out.println(MENU_TITLE);
-//        menuItems.forEach((key, game) -> game.game.outDescription());
+
         for (var row : screenPosToHotPointMapping) {
             menuItems.get(row[1]).game.outDescription();
         }
@@ -35,7 +36,7 @@ public class Menu {
 
         var countTry = 0;
         do {
-            var gameHotPoint = Cli.inputGameNumber(CHOICE_MSG);
+            var gameHotPoint = Cli.inputIntNumber(CHOICE_MSG);
             var menuItem = menuItems.get(gameHotPoint);
             if (menuItem != null) {
                 return menuItem;

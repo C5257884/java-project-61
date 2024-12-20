@@ -1,5 +1,6 @@
 package hexlet.code;
 
+import hexlet.code.game.PrimeNumberGame;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.InvocationTargetException;

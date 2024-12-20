@@ -1,4 +1,6 @@
-package hexlet.code;
+package hexlet.code.game;
+
+import hexlet.code.Cli;
 
 import java.util.Random;
 
@@ -22,7 +24,7 @@ public class ProgressionGame extends Greet {
     }
 
 
-    ProgressionGame(int gameHotPoint) {
+    public ProgressionGame(int gameHotPoint) {
         super(gameHotPoint, "Progression");
     }
 
@@ -72,7 +74,7 @@ public class ProgressionGame extends Greet {
 
             System.out.println("Question: " + progressionStr);
 
-            actMissMemberOfProgression = Cli.inputGameNumber("Your answer: ");
+            actMissMemberOfProgression = Cli.inputIntNumber("Your answer: ");
             expMissMemberOfProgression = arithmeticProgression.getMember(indexOfMissMember);
 
             if (actMissMemberOfProgression == expMissMemberOfProgression) {

@@ -1,10 +1,12 @@
-package hexlet.code;
+package hexlet.code.game;
+
+import hexlet.code.Cli;
 
 public class PrimeNumberGame extends Greet {
     private static final int MAX_VALUE = 100;
     private static final int CORRECT_ANSWERS_THRESHOLD = 3;
 
-    PrimeNumberGame(int gameHotPoint) {
+    public PrimeNumberGame(int gameHotPoint) {
         super(gameHotPoint, "Prime");
     }
 
@@ -35,7 +37,7 @@ public class PrimeNumberGame extends Greet {
 
             System.out.println("Question: " + number);
 
-            answer = Cli.getUserName("Your answer (yes/no): ");
+            answer = Cli.inputString("Your answer (yes/no): ");
             correctAnswer = (isPrime(number)) ? "yes" : "no";
 
             if (answer.equals(correctAnswer)) {

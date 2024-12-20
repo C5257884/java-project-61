@@ -1,10 +1,12 @@
-package hexlet.code;
+package hexlet.code.game;
+
+import hexlet.code.Cli;
 
 public class GCDGame extends Greet {
     private static final int MAX_VALUE = 100;
 
 
-    GCDGame(int gameHotPoint) {
+    public GCDGame(int gameHotPoint) {
         super(gameHotPoint, "GCD");
     }
 
@@ -40,7 +42,7 @@ public class GCDGame extends Greet {
             int operand2 = rand.nextInt(MAX_VALUE) + 1;
             System.out.println("Question: " + operand1 + " " + operand2);
 
-            actGDC = Cli.inputGameNumber("Your answer: ");
+            actGDC = Cli.inputIntNumber("Your answer: ");
             expGDC = evalGDC(operand1, operand2);
 
             if (actGDC == expGDC) {

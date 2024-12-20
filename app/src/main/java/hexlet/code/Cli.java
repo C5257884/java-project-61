@@ -4,7 +4,7 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Cli {
-    public static String getUserName(String question) {
+    public static String inputString(String question) {
         Scanner input = new Scanner(System.in);
 
         System.out.print(question + " ");
@@ -18,9 +18,9 @@ public class Cli {
 
     }
 
-    public static int inputGameNumber(String question) {
-        Scanner input = new Scanner(System.in);
+    public static int inputIntNumber(String question) {
 
+        Scanner input = new Scanner(System.in);
         System.out.print(question + " ");
 
         try {
@@ -29,6 +29,5 @@ public class Cli {
 //            throw new RuntimeException(e);
             return 0;
         }
-
     }
 }
