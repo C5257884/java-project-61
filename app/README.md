@@ -1,4 +1,4 @@
-# Project **"Brain Games"**
+# Project "Brain Games"
 
 ![Java CI](https://github.com/hexlet-boilerplates/java-package/workflows/Java%20CI/badge.svg)
 
