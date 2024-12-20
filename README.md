@@ -15,12 +15,12 @@ considered to be completed. Incorrect answers end the game and prompt you to do 
 * Prime - determining a prime number.
 
 ### How to install:
-    git clone git@github.com:C5257884/java-project-61.git
+    git clone https://github.com/C5257884/java-project-61.git
     cd java-project-61
     make -C app build
 
 ### Run:
-    app/build/install/app/bin/BrainGames 
+    app/build/install/MindGames/bin/MindGames 
 
 ### Examples of usage (in asciinema format):
 #### "Is Even Game"
