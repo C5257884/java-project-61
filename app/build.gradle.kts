@@ -52,3 +52,7 @@ tasks.getByName("run", JavaExec::class) {
 }
 
 tasks.jacocoTestReport { reports { xml.required.set(true) } }
+
+tasks.register("install") {
+    dependsOn(tasks.installDist)
+}
