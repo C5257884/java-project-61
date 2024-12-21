@@ -13,7 +13,8 @@ on:
       - '**'
 
 jobs:
-  build:
+    run: 
+	./gradlew installDist  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
