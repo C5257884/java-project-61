@@ -1,6 +1,6 @@
 # Mind Games
 
-[![Actions Status](https://github.com/paulvino/java-project-61/workflows/hexlet-check/badge.svg)](https://github.com/C5257884/java-project-61/actions)
+[![Actions Status](https://github.com/paulvino/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/C5257884/java-project-61/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/746d55b7818b14290a2a/maintainability)](https://codeclimate.com/github/C5257884/java-project-61/maintainability)
 
 ### Description:
@@ -16,11 +16,11 @@ considered to be completed. Incorrect answers end the game and prompt you to do 
 
 ### How to install:
     git clone https://github.com/C5257884/java-project-61.git
-    cd java-project-61
-    make -C app build
+    cd java-project-61/app
+    make build
 
 ### Run:
-    app/build/install/MindGames/bin/MindGames 
+    make run 
 
 ### Examples of usage (in asciinema format):
 #### "Is Even Game"
