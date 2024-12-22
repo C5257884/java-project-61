@@ -15,6 +15,11 @@ public class Greet extends AbstractGame {
         super(title);
     }
 
+    /**
+     * A simple implementation of a greeting game.
+     * This method can be overridden to provide custom behavior for the game.
+     * When overriding, ensure that user interaction flow is preserved.
+     */
     @Override
     public void play() {
         System.out.println(GREET_MSG);
