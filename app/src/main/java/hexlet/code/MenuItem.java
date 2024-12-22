@@ -1,15 +1,17 @@
 package hexlet.code;
 
 import hexlet.code.game.Game;
+import lombok.Getter;
 
-public class MenuItem {
+public final class MenuItem {
     public static final String ACTION_EXEC = "execute";
-    public final String key;
+    @Getter
+    private final String key;
     private final Game game;
 
-    public MenuItem(String key, Game game) {
-        this.key = key;
-        this.game = game;
+    public MenuItem(String newKey, Game newGame) {
+        key = newKey;
+        game = newGame;
     }
 
     public void action(String actionName) {

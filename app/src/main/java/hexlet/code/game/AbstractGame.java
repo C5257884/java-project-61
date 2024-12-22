@@ -17,8 +17,8 @@ abstract class AbstractGame implements Game {
         return userName;
     }
 
-    protected final void setUserName(String userName) {
-        this.userName = userName;
+    protected final void setUserName(String newUserName) {
+        userName = newUserName;
     }
 
     @Override

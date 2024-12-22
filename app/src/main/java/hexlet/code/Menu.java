@@ -1,20 +1,20 @@
 package hexlet.code;
 
-public class Menu {
+public final class Menu {
     public static final String MENU_TITLE = "Please enter the game number and press Enter.";
     public static final String CHOICE_MSG = "Your choice: ";
     private static final int MAX_WRONG_CHOICE_NUM = 3;
     private final MenuItem[] items;
 
-    public Menu(MenuItem[] items) {
-        this.items = items;
+    public Menu(MenuItem[] menuItems) {
+        items = menuItems;
     }
 
     public void showItems() {
 
         System.out.println(MENU_TITLE);
         for (var item : items) {
-            System.out.println(item.key + " - " + item.getDescription());
+            System.out.println(item.getKey() + " - " + item.getDescription());
         }
     }
 
@@ -25,7 +25,7 @@ public class Menu {
             var itemKey = Cli.inputString(CHOICE_MSG);
 
             for (var item : items) {
-                if (item.key.equals(itemKey)) {
+                if (item.getKey().equals(itemKey)) {
                     return item;
                 }
             }
