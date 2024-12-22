@@ -4,7 +4,7 @@ import hexlet.code.Cli;
 
 public class Calculator extends Greet {
     private static final int MAX_VALUE = 100;
-
+    private static final int NUMBER_OF_OPERATION = 3;
 
     public Calculator() {
         super("Calc");
@@ -38,7 +38,7 @@ public class Calculator extends Greet {
 
             int operand1 = rand.nextInt(MAX_VALUE) + 1;
             int operand2 = rand.nextInt(MAX_VALUE) + 1;
-            String operation = getOperation(rand.nextInt(3));
+            String operation = getOperation(rand.nextInt(NUMBER_OF_OPERATION));
             System.out.println("Question: " + operand1 + " " + operation + " " + operand2);
 
             answer = Cli.inputString("Your answer: ");
