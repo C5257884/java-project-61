@@ -36,7 +36,7 @@ public class EvenCheck extends Greet {
 
         do {
 
-            int number = rand.nextInt(MAX_VALUE) + 1;
+            int number = getRand().nextInt(MAX_VALUE) + 1;
             System.out.println("Question: " + number);
 
             answer = Cli.inputString("Your answer (yes/no): ");

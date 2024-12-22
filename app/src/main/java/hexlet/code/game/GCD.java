@@ -38,8 +38,8 @@ public class GCD extends Greet {
 
         do {
 
-            int operand1 = rand.nextInt(MAX_VALUE) + 1;
-            int operand2 = rand.nextInt(MAX_VALUE) + 1;
+            int operand1 = getRand().nextInt(MAX_VALUE) + 1;
+            int operand2 = getRand().nextInt(MAX_VALUE) + 1;
             System.out.println("Question: " + operand1 + " " + operand2);
 
             actGDC = Cli.inputIntNumber("Your answer: ");

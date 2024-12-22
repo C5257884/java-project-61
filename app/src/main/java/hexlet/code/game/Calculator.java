@@ -36,9 +36,9 @@ public class Calculator extends Greet {
 
         do {
 
-            int operand1 = rand.nextInt(MAX_VALUE) + 1;
-            int operand2 = rand.nextInt(MAX_VALUE) + 1;
-            String operation = getOperation(rand.nextInt(NUMBER_OF_OPERATION));
+            int operand1 = getRand().nextInt(MAX_VALUE) + 1;
+            int operand2 = getRand().nextInt(MAX_VALUE) + 1;
+            String operation = getOperation(getRand().nextInt(NUMBER_OF_OPERATION));
             System.out.println("Question: " + operand1 + " " + operation + " " + operand2);
 
             answer = Cli.inputString("Your answer: ");

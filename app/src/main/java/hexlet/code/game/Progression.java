@@ -58,7 +58,7 @@ public class Progression extends Greet {
 
         do {
             lengthOfProgression = LENGTH_OF_PROGRESSION;
-            indexOfMissMember = rand.nextInt(lengthOfProgression) + 1;
+            indexOfMissMember = getRand().nextInt(lengthOfProgression) + 1;
 
             // При каждом вопросе - нужен новый экземпляр
             var arithmeticProgression = new ArithmeticProgression();

@@ -4,14 +4,12 @@ import java.util.Random;
 
 abstract class AbstractGame implements Game {
     protected static final int CORRECT_ANSWERS_THRESHOLD = 3;
-    // CHECKSTYLE:OFF
-    protected final Random rand;
-    // CHECKSTYLE:ON
+    private final Random rand;
     private final String title;
     private String userName;
 
-    AbstractGame(String title) {
-        this.title = title;
+    AbstractGame(String gameTitle) {
+        title = gameTitle;
         rand = new Random();
     }
 
@@ -36,5 +34,9 @@ abstract class AbstractGame implements Game {
                 + "'\nLet's try again, " + userName + "!";
             System.out.println(info);
         }
+    }
+
+    protected Random getRand() {
+        return rand;
     }
 }
