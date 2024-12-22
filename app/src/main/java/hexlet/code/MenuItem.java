@@ -3,11 +3,25 @@ package hexlet.code;
 import hexlet.code.game.Game;
 
 public class MenuItem {
-    protected Integer screenPosition;
-    public final Game game;
+    public static final String ACTION_EXEC = "execute";
+    public final String key;
+    private final Game game;
 
-    MenuItem(Integer screenPosition, Game game) {
-        this.screenPosition = screenPosition;
+    public MenuItem(String key, Game game) {
+        this.key = key;
         this.game = game;
     }
+
+    public void action(String actionName) {
+        if (actionName.equals(MenuItem.ACTION_EXEC)) {
+            game.play();
+        } else {
+            throw new RuntimeException("Invalid action name: " + actionName);
+        }
+    }
+
+    public String getDescription() {
+        return game.getDescription();
+    }
 }
+

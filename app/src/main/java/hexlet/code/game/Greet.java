@@ -7,12 +7,12 @@ public class Greet extends AbstractGame {
     public static final String INPUT_YOUR_NAME = "May I have your name?";
     public static final String HELLO_MSG = "Hello, ";
 
-    public Greet(int gameHotPoint) {
-        super(gameHotPoint, "Greet");
+    public Greet() {
+        super("Greet");
     }
 
-    public Greet(int gameHotPoint, String title) {
-        super(gameHotPoint, title);
+    public Greet(String title) {
+        super(title);
     }
 
     @Override

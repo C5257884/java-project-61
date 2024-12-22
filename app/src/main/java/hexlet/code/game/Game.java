@@ -2,7 +2,6 @@ package hexlet.code.game;
 
 public interface Game {
 
-    void outDescription();
+    String getDescription();
     void play();
-    int getHotPoint();
 }
