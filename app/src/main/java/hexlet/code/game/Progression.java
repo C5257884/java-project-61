@@ -29,7 +29,7 @@ public class Progression extends Greet {
     }
 
     @Override
-    public void play() {
+    public final void play() {
 
 /*
     Welcome to the Brain Games!

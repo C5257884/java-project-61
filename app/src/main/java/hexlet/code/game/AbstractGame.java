@@ -4,13 +4,21 @@ import java.util.Random;
 
 abstract class AbstractGame implements Game {
     protected static final int CORRECT_ANSWERS_THRESHOLD = 3;
-    protected String title;
-    protected String userName;
-    protected Random rand;
+    protected final String title;
+    protected final Random rand;
+    private String userName;
 
     AbstractGame(String title) {
         this.title = title;
         rand = new Random();
+    }
+
+    protected final String getUserName() {
+        return userName;
+    }
+
+    protected final void setUserName(String userName) {
+        this.userName = userName;
     }
 
     @Override
@@ -18,7 +26,7 @@ abstract class AbstractGame implements Game {
         return title;
     }
 
-    protected void endGameFlow(int trueAnswerCount, String answer, String correctAnswer) {
+    protected final void endGameFlow(int trueAnswerCount, String answer, String correctAnswer) {
         if (trueAnswerCount == Calculator.CORRECT_ANSWERS_THRESHOLD) {
             System.out.println("Congratulations, " + userName + "!");
         } else {

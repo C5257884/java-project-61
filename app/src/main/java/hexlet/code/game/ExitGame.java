@@ -6,7 +6,7 @@ public class ExitGame extends AbstractGame {
     }
 
     @Override
-    public void play() {
+    public final void play() {
         System.exit(0);
     }
 }

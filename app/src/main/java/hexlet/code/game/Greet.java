@@ -18,7 +18,7 @@ public class Greet extends AbstractGame {
     @Override
     public void play() {
         System.out.println(GREET_MSG);
-        userName = Cli.inputString(INPUT_YOUR_NAME);
-        System.out.println(HELLO_MSG + userName + "!");
+        setUserName(Cli.inputString(INPUT_YOUR_NAME));
+        System.out.println(HELLO_MSG + getUserName() + "!");
     }
 }

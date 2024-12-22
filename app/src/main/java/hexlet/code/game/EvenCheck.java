@@ -11,7 +11,7 @@ public class EvenCheck extends Greet {
     }
 
     @Override
-    public void play() {
+    public final void play() {
 
 //        Welcome to the Brain Games!
 //        May I have your name? Bill
