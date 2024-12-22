@@ -4,7 +4,7 @@ import java.util.Random;
 
 abstract class AbstractGame implements Game {
     protected static final int CORRECT_ANSWERS_THRESHOLD = 3;
-    protected final String title;
+    private final String title;
     protected final Random rand;
     private String userName;
 
