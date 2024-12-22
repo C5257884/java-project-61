@@ -2,8 +2,8 @@ package hexlet.code;
 
 
 /**
- * Класс предназначен для хранения пунктов меню, вывода их на экран,
- * запроса ввода от пользователя пункта меню
+ * Класс предназначен для хранения пунктов меню.
+ * Выводи пункты меню на экран, запрашивает у пользователя выбор пункта меню.
  */
 public final class Menu {
     public static final String MENU_TITLE = "Please enter the game number and press Enter.";
