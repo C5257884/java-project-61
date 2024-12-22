@@ -4,8 +4,9 @@ import java.util.Random;
 
 abstract class AbstractGame implements Game {
     protected static final int CORRECT_ANSWERS_THRESHOLD = 3;
-    private final String title;
+    @SuppressWarnings("checkstyle:VisibilityModifier")
     protected final Random rand;
+    private final String title;
     private String userName;
 
     AbstractGame(String title) {
