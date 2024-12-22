@@ -24,7 +24,7 @@ considered to be completed. Incorrect answers end the game and prompt you to do 
 
 ### Examples of usage (in asciinema format):
 #### "Is Even Game"
-[![asciicast](https://asciinema.org/a/XU8otTBMjFGfWnlxveEiSTxaW.svg)](https://asciinema.org/a/XU8otTBMjFGfWnlxveEiSTxaW)
+[![asciicast](https://asciinema.org/a/12UFXzPNeIiRwlun4iRsu3aaL.svg)](https://asciinema.org/a/12UFXzPNeIiRwlun4iRsu3aaL)
 
 #### "Calculator Game"
 [![asciicast](https://asciinema.org/a/6zaBflUh90Ki1qvyOFtFQXFgg.svg)](https://asciinema.org/a/6zaBflUh90Ki1qvyOFtFQXFgg)
