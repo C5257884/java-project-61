@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class PrimeNumberGameTest {
-
+    @SuppressWarnings("checkCode:MagicNumber")
     @Test
     void testIsPrime() {
 
