@@ -1,6 +1,6 @@
 # Mind Games
 
-[![Actions Status](https://github.com/paulvino/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/C5257884/java-project-61/actions)
+[![Actions Status](https://github.com/C5257884/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/C5257884/java-project-61/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/746d55b7818b14290a2a/maintainability)](https://codeclimate.com/github/C5257884/java-project-61/maintainability)
 
 ### Description:
