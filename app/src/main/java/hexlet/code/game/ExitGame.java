@@ -6,6 +6,21 @@ public class ExitGame extends AbstractGame {
     }
 
     @Override
+    protected String getCorrectAnswer() {
+        return "";
+    }
+
+    @Override
+    protected String inputActalAnswer() {
+        return "";
+    }
+
+    @Override
+    protected void generateGameParams() {
+
+    }
+
+    @Override
     public final void play() {
         System.exit(0);
     }

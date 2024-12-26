@@ -1,11 +1,27 @@
 package hexlet.code.game;
 
-import hexlet.code.Cli;
+//import hexlet.code.Cli;
 
 public class Greet extends AbstractGame {
-    public static final String GREET_MSG = "\nWelcome to the Brain Games!";
-    public static final String INPUT_YOUR_NAME = "May I have your name?";
-    public static final String HELLO_MSG = "Hello, ";
+//    private static final String GREET_MSG = "\nWelcome to the Brain Games!";
+//    private static final String INPUT_YOUR_NAME = "May I have your name?";
+//    private static final String HELLO_MSG = "Hello, ";
+
+
+    @Override
+    protected void generateGameParams() {
+    }
+
+    @Override
+    protected String getCorrectAnswer() {
+        return "";
+    }
+
+    @Override
+    protected String inputActalAnswer() {
+        return "";
+    }
+
 
     public Greet() {
         super("Greet");
@@ -22,8 +38,6 @@ public class Greet extends AbstractGame {
      */
     @Override
     public void play() {
-        System.out.println(GREET_MSG);
-        setUserName(Cli.inputString(INPUT_YOUR_NAME));
-        System.out.println(HELLO_MSG + getUserName() + "!");
+        handShake();
     }
 }
