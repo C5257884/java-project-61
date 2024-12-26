@@ -8,11 +8,20 @@ public class EvenCheck extends AbstractGame {
         gameMainQuestion = "Answer 'yes' if the number is even, otherwise answer 'no'.";
     }
 
+    /**
+     * Устанавливает случаным образом число для игры.
+     * Данное число либо четное, либо - нет, пользователю нужно это определить
+     * и дать правильный ответ
+     */
     @Override
     protected void generateGameParams() {
         centralGameNumber = getRand().nextInt(MAX_VALUE) + 1;
     }
 
+    /**
+     * Запрос ответа пользователя на вопрос, четное или нет число
+     * @return Введенный пользователем ответ "yes/no"
+     */
     @Override
     protected String inputActalAnswer() {
 
@@ -21,6 +30,11 @@ public class EvenCheck extends AbstractGame {
         return input.nextLine();
     }
 
+    /**
+     * Определение четности числа и возврат ответа.
+     * Возвращенный ответ будет сравниваться с ответом введенным пользователем
+     * @return Четное или нет число "yes/no"
+     */
     @Override
     protected String getCorrectAnswer() {
         return (centralGameNumber % 2 == 0) ? "yes" : "no";

@@ -22,6 +22,6 @@ public class ExitGame extends AbstractGame {
 
     @Override
     public final void play() {
-        System.exit(0);
+//        System.exit(0);
     }
 }

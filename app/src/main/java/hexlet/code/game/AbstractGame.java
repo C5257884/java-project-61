@@ -2,7 +2,11 @@ package hexlet.code.game;
 
 import java.util.Random;
 import java.util.Scanner;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 abstract class AbstractGame implements Game {
     // Constants definition {
     private static final String GREET_MSG = "\nWelcome to the Brain Games!";
@@ -28,16 +32,8 @@ abstract class AbstractGame implements Game {
         input = new Scanner(System.in);
     }
 
-//    protected final String getUserName() {
-//        return userName;
-//    }
-
-//    protected final void setUserName(String newUserName) {
-//        userName = newUserName;
-//    }
-
     /**
-     * Определегие правльного ответа для текущщей игры.
+     * Определение правльного ответа для текущщей игры.
      *
      * @return the line - correct answer
      */
