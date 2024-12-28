@@ -26,17 +26,13 @@ public class Greet extends AbstractGame {
      * В данном классе - не используется.
      */
     @Override
-    protected String inputActalAnswer() {
+    protected String inputActualAnswer() {
         return "";
     }
 
 
     public Greet() {
         super("Greet");
-    }
-
-    public Greet(String title) {
-        super(title);
     }
 
     /**

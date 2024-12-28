@@ -1,8 +1,29 @@
 package hexlet.code.game;
 
-public class EvenCheck extends AbstractGame {
+/**
+ * Game Scenario.
+ * <p>
+ * Welcome to the Brain Games!<br/>
+ * May I have your name? Bill<br/>
+ * Hello, Bill!<br/>
+ * Answer 'yes' if the number is even, otherwise answer 'no'.<br/>
+ * Question: 15<br/>
+ * Your answer: yes<br/>
+ * ##В случае, если пользователь даст неверный ответ, необходимо завершить игру и вывести сообщение:<br/>
+ * 'yes' is wrong answer ;(. Correct answer was 'no'.<br/>
+ * Let's try again, Bill!<br/>
+ * ##В случае, если пользователь ввел верный ответ, нужно отобразить:<br/>
+ * Correct!<br/>
+ * ##и приступить к следующему числу.<br/>
+ * ##Пользователь должен дать правильный ответ на три вопроса подряд. После успешной игры нужно вывести:<br/>
+ * Congratulations, Bill!<br/>
+ */
+public final class EvenCheck extends AbstractGame {
     private int centralGameNumber;
 
+    /**
+     * CONSTRUCTOR.
+     */
     public EvenCheck() {
         super("Even");
         gameMainQuestion = "Answer 'yes' if the number is even, otherwise answer 'no'.";
@@ -19,11 +40,11 @@ public class EvenCheck extends AbstractGame {
     }
 
     /**
-     * Запрос ответа пользователя на вопрос, четное или нет число
+     * Запрос ответа пользователя на вопрос, четное или нет число.
      * @return Введенный пользователем ответ "yes/no"
      */
     @Override
-    protected String inputActalAnswer() {
+    protected String inputActualAnswer() {
 
         System.out.println("Question: " + centralGameNumber);
         System.out.print("Your answer (yes/no): ");
@@ -38,28 +59,5 @@ public class EvenCheck extends AbstractGame {
     @Override
     protected String getCorrectAnswer() {
         return (centralGameNumber % 2 == 0) ? "yes" : "no";
-    }
-
-    /**
-     * Game Scenario.
-     * <p>
-     * Welcome to the Brain Games!
-     * May I have your name? Bill
-     * Hello, Bill!
-     * Answer 'yes' if the number is even, otherwise answer 'no'.
-     * Question: 15
-     * Your answer: yes
-     * ##В случае, если пользователь даст неверный ответ, необходимо завершить игру и вывести сообщение:
-     * 'yes' is wrong answer ;(. Correct answer was 'no'.
-     * Let's try again, Bill!
-     * ##В случае, если пользователь ввел верный ответ, нужно отобразить:
-     * Correct!
-     * ##и приступить к следующему числу.
-     * ##Пользователь должен дать правильный ответ на три вопроса подряд. После успешной игры нужно вывести:
-     * Congratulations, Bill!
-     */
-    @Override
-    public final void play() {
-        super.play();
     }
 }

@@ -1,72 +1,84 @@
 package hexlet.code.game;
 
-import hexlet.code.Cli;
-
-public class Calculator extends Greet {
-    private static final int MAX_VALUE = 100;
+/**
+ * Game Scenario.
+ * <p>
+ * Welcome to the Brain Games!<br/>
+ * May I have your name? Sam<br/>
+ * Hello, Sam!<br/>
+ * What is the result of the expression?<br/>
+ * Question: 12 * 9<br/>
+ * Your answer: 108<br/>
+ * Correct!<br/>
+ * Question: 17 + 10<br/>
+ * Your answer: 27<br/>
+ * Correct!<br/>
+ * Question: 9 - 11<br/>
+ * Your answer: -2<br/>
+ * Correct!<br/>
+ * Congratulations, Sam!<br/>
+ */
+public final class Calculator extends AbstractGame {
+//    private static final int MAX_VALUE = 100;
     private static final int NUMBER_OF_OPERATION = 3;
+    private int operand1;
+    private int operand2;
+    private String operation;
+    private String loopQuestion;
 
     public Calculator() {
         super("Calc");
+        gameMainQuestion = "What is the result of the expression?";
     }
 
+    /**
+     * Генерирует с помощью генератора случайных чисел<br/>
+     * 2 случаных числа и операцию, одну из 3-х(+,-,*), которая<br/>
+     * должна быть произведена пользователем над этими числами.
+     * Также устанавливается текст вопроса, который будет задан пользователю
+     */
     @Override
-    public final void play() {
-
-//        Welcome to the Brain Games!
-//        May I have your name? Sam
-//        Hello, Sam!
-//        What is the result of the expression?
-//        Question: 12 * 9
-//        Your answer: 108
-//        Correct!
-//        Question: 17 + 10
-//        Your answer: 27
-//        Correct!
-//        Question: 9 - 11
-//        Your answer: -2
-//        Correct!
-//        Congratulations, Sam!
-        super.play();
-        System.out.println("What is the result of the expression?");
-
-        var trueAnswerCount = 0;
-        String answer;
-        String correctAnswer;
-
-        do {
-
-            int operand1 = getRand().nextInt(MAX_VALUE) + 1;
-            int operand2 = getRand().nextInt(MAX_VALUE) + 1;
-            String operation = getOperation(getRand().nextInt(NUMBER_OF_OPERATION));
-            System.out.println("Question: " + operand1 + " " + operation + " " + operand2);
-
-            answer = Cli.inputString("Your answer: ");
-            correctAnswer = eval(operand1, operand2, operation);
-
-            if (answer.equals(correctAnswer)) {
-                trueAnswerCount++;
-                System.out.println("Correct!");
-            } else {
-                trueAnswerCount = 0;
-                break;
-            }
-        } while (trueAnswerCount < CORRECT_ANSWERS_THRESHOLD);
-
-        endGameFlow(trueAnswerCount, answer, correctAnswer);
+    protected void generateGameParams() {
+        operand1 = getRand().nextInt(MAX_VALUE) + 1;
+        operand2 = getRand().nextInt(MAX_VALUE) + 1;
+        operation = getOperation(getRand().nextInt(NUMBER_OF_OPERATION));
+        loopQuestion = "Question: " + operand1 + " " + operation + " " + operand2;
     }
 
-    private String eval(int operand1, int operand2, String operation) {
-        return switch (operation) {
-            case "+" -> "" + (operand1 + operand2);
-            case "-" -> "" + (operand1 - operand2);
-            case "*" -> "" + (operand1 * operand2);
-            default -> throw new IllegalStateException("Unexpected value: " + operation);
-        };
+    /**
+     * Запрос ответа пользователя на вопрос, четное или нет число.
+     * @return Введенный пользователем ответ "yes/no"
+     */
+    @Override
+    protected String inputActualAnswer() {
 
+        System.out.println(loopQuestion);
+        System.out.print("Your answer: ");
+        return input.nextLine();
+    }
+
+    /**
+     * Определение результата операции, которую предложено вычислить ползователю.
+     * Возвращаемый ответ будет сравниваться с ответом введенным пользователем
+     * @return Результат операции [operand1 operation operand2]
+     */
+    @Override
+    protected String getCorrectAnswer() {
+        return eval(operand1, operand2, operation);
+    }
+
+    private String eval(int inOperand1, int inOperand2, String inOperation) {
+
+        return switch (inOperation) {
+            case "+" -> "" + (inOperand1 + inOperand2);
+            case "-" -> "" + (inOperand1 - inOperand2);
+            case "*" -> "" + (inOperand1 * inOperand2);
+            default -> throw new IllegalStateException("Unexpected value: " + inOperation);
+        };
     }
 
     private String getOperation(int i) {
+
         return switch (i) {
             case 0 -> "+";
             case 1 -> "-";

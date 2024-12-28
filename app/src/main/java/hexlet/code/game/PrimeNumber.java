@@ -1,56 +1,67 @@
 package hexlet.code.game;
 
-import hexlet.code.Cli;
+/**
+ * Game Scenario.
+ * <p>
+ * Welcome to the Brain Games!
+ * May I have your name? Sam
+ * Hello, Sam!
+ * Answer 'yes' if given number is prime. Otherwise answer 'no'.
+ * Question: 7
+ * Your answer: yes
+ * Correct!
+ */
+public final class PrimeNumber extends AbstractGame {
+    private int centralGameNumber;
 
-public class PrimeNumber extends Greet {
-    private static final int MAX_VALUE = 100;
-    private static final int CORRECT_ANSWERS_THRESHOLD = 3;
-
+    /**
+     * CONSTRUCTOR.
+     */
     public PrimeNumber() {
         super("Prime");
+        gameMainQuestion = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     }
 
+    /**
+     * Устанавливает случаным образом число для игры.
+     * Данное число либо ПРОСТОЕ (делится на 1 и само себя),<br/>
+     * либо - нет, пользователю нужно это определить и дать правильный ответ
+     */
     @Override
-    public final void play() {
-
-/*
-    Welcome to the Brain Games!
-    May I have your name? Sam
-    Hello, Sam!
-    Answer 'yes' if given number is prime. Otherwise answer 'no'.
-    Question: 7
-    Your answer: yes
-    Correct!
-*/
-
-        super.play();
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-
-        var trueAnswerCount = 0;
-        String answer;
-        String correctAnswer;
-
-
-        do {
-
-            int number = getRand().nextInt(MAX_VALUE) + 1;
-
-            System.out.println("Question: " + number);
-
-            answer = Cli.inputString("Your answer (yes/no): ");
-            correctAnswer = (isPrime(number)) ? "yes" : "no";
-
-            if (answer.equals(correctAnswer)) {
-                trueAnswerCount++;
-                System.out.println("Correct!");
-            } else {
-                trueAnswerCount = 0;
-                break;
-            }
-        } while (trueAnswerCount < CORRECT_ANSWERS_THRESHOLD);
-
-        endGameFlow(trueAnswerCount, answer, correctAnswer);
+    protected void generateGameParams() {
+        centralGameNumber = getRand().nextInt(MAX_VALUE) + 1;
     }
+
+    /**
+     * Запрос ответа пользователя на вопрос, четное или нет число.
+     *
+     * @return Введенный пользователем ответ "yes/no"
+     */
+    @Override
+    protected String inputActualAnswer() {
+
+        System.out.println("Question: " + centralGameNumber);
+        System.out.print("Your answer (yes/no): ");
+        return input.nextLine();
+    }
+
+    /**
+     * Определение четности числа и возврат ответа.
+     * Возвращенный ответ будет сравниваться с ответом введенным пользователем
+     *
+     * @return Четное или нет число "yes/no"
+     */
+    @Override
+    protected String getCorrectAnswer() {
+        return (isPrime(centralGameNumber)) ? "yes" : "no";
+    }
+
+    /**
+     * Определение простое число или нет.
+     *
+     * @param n - Число
+     * @return true/false
+     */
     private boolean isPrime(int n) {
         if (n <= 1) {
             return false;

@@ -17,7 +17,7 @@ abstract class AbstractGame implements Game {
     // Constants definition }
 
     /**
-     * Основной вопрос игры.
+     * Текст основного вопроса игры.
      */
     protected String gameMainQuestion;
 
@@ -44,7 +44,7 @@ abstract class AbstractGame implements Game {
      *
      * @return the line - user answer
      */
-    protected abstract String inputActalAnswer();
+    protected abstract String inputActualAnswer();
 
     /**
      * Установка центральных условий/параметров игры.
@@ -58,14 +58,14 @@ abstract class AbstractGame implements Game {
 
         handShake();
 
-        // Output main quastion of the Game
+        // Output main question of the Game
         System.out.println(gameMainQuestion);
 
         var trueAnswerCount = 0;
 
         do {
             generateGameParams();
-            actualAnswer = inputActalAnswer();
+            actualAnswer = inputActualAnswer();
             correctAnswer = getCorrectAnswer();
 
             if (actualAnswer.equals(correctAnswer)) {
@@ -91,30 +91,14 @@ abstract class AbstractGame implements Game {
     protected void handShake() {
         System.out.println(GREET_MSG);
         System.out.print(INPUT_YOUR_NAME);
-//        try {
+
         userName = input.nextLine();
         System.out.println(HELLO_MSG + userName + "!");
-//    } catch (NoSuchElementException e) {
-//            e.printStackTrace();
-//            System.exit(-1);
-//        }
-//        System.out.println(gameMainQuestion);
     }
 
     @Override
     public String getDescription() {
         return title;
-    }
-
-    protected final void endGameFlow(int trueAnswerCount, String answer, String correctAnswer) {
-        if (trueAnswerCount == CORRECT_ANSWERS_THRESHOLD) {
-            System.out.println("Congratulations, " + userName + "!");
-        } else {
-            var info =
-                "'" + answer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'\nLet's try again, "
-                    + userName + "!";
-            System.out.println(info);
-        }
     }
 
     protected Random getRand() {

@@ -11,7 +11,7 @@ public class ExitGame extends AbstractGame {
     }
 
     @Override
-    protected String inputActalAnswer() {
+    protected String inputActualAnswer() {
         return "";
     }
 
