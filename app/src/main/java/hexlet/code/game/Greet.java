@@ -2,11 +2,15 @@ package hexlet.code.game;
 
 import java.util.Scanner;
 
-public class Greet implements Game {
+public final class Greet implements Game {
     private final Scanner input;
 
-    public Greet(Scanner input) {
-        this.input = input;
+    /**
+     * CONSTRUCTOR.
+     * @param inputScaner - object Scaner for user input
+     */
+    public Greet(Scanner inputScaner) {
+        this.input = inputScaner;
     }
 
     /**
@@ -22,6 +26,10 @@ public class Greet implements Game {
         System.out.println("Hello, " + userName + "!");
     }
 
+    /**
+     * Method return Game description.
+     * @return game description
+     */
     @Override
     public String getDescription() {
         return "Greet";

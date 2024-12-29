@@ -21,14 +21,13 @@ abstract class AbstractGame implements Game {
     private String gameMainQuestion;
     @Getter(AccessLevel.PROTECTED)
     private final Random rand;
-//    @Getter
     private final String title;
     private Scanner input;
 
-    AbstractGame(String gameTitle, Scanner input) {
+    AbstractGame(String gameTitle, Scanner inputScaner) {
         title = gameTitle;
         rand = new Random();
-        this.input = input;
+        this.input = inputScaner;
     }
 
     /**
@@ -81,6 +80,10 @@ abstract class AbstractGame implements Game {
         System.out.println("Congratulations, " + userName + "!");
     }
 
+    /**
+     * Method return Game description.
+     * @return game description
+     */
     @Override
     public String getDescription() {
         return title;
