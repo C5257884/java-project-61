@@ -54,7 +54,7 @@ public final class Calculator extends AbstractGame {
 
         System.out.println(loopQuestion);
         System.out.print("Your answer: ");
-        return input.nextLine();
+        return getInput().nextLine();
     }
 
     /**

@@ -48,7 +48,7 @@ public final class EvenCheck extends AbstractGame {
 
         System.out.println("Question: " + centralGameNumber);
         System.out.print("Your answer (yes/no): ");
-        return input.nextLine();
+        return getInput().nextLine();
     }
 
     /**

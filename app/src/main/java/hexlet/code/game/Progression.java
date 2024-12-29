@@ -81,7 +81,7 @@ public final class Progression extends AbstractGame {
 
         System.out.println("Question: " + progressionStr);
         System.out.print("Your answer: ");
-        return input.nextLine();
+        return getInput().nextLine();
     }
 
     /**

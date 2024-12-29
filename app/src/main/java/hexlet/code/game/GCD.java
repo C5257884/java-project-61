@@ -49,7 +49,7 @@ public class GCD extends AbstractGame {
 
         System.out.println(loopQuestion);
         System.out.print("Your answer: ");
-        return input.nextLine();
+        return getInput().nextLine();
     }
 
     /**

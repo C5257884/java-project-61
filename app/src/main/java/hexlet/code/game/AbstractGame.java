@@ -21,16 +21,13 @@ abstract class AbstractGame implements Game {
     /**
      * Текст основного вопроса игры.
      */
-    @Getter
     private String gameMainQuestion;
     //@Getter(AccessLevel.PROTECTED)
     protected final Random rand;
 //    @Getter
     private final String title;
-    @Getter
     private String userName;
-
-    protected Scanner input;
+    private Scanner input;
 
     AbstractGame(String gameTitle) {
         title = gameTitle;
