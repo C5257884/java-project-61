@@ -26,7 +26,7 @@ public final class EvenCheck extends AbstractGame {
      */
     public EvenCheck() {
         super("Even");
-        gameMainQuestion = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+        setGameMainQuestion("Answer 'yes' if the number is even, otherwise answer 'no'.");
     }
 
     /**

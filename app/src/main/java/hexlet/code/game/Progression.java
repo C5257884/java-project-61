@@ -46,7 +46,7 @@ public final class Progression extends AbstractGame {
      */
     public Progression() {
         super("Progression");
-        gameMainQuestion = "What number is missing in the progression?";
+        setGameMainQuestion("What number is missing in the progression?");
     }
 
     /**

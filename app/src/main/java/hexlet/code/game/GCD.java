@@ -25,7 +25,7 @@ public class GCD extends AbstractGame {
 
     public GCD() {
         super("GCD");
-        gameMainQuestion = "Find the greatest common divisor of given numbers.";
+        setGameMainQuestion("Find the greatest common divisor of given numbers.");
     }
 
     /**

@@ -1,6 +1,8 @@
 package hexlet.code;
 
 
+import java.util.Scanner;
+
 /**
  * Класс предназначен для хранения пунктов меню.
  * Выводи пункты меню на экран, запрашивает у пользователя выбор пункта меню.
@@ -25,9 +27,12 @@ public final class Menu {
 
     public MenuItem getUserChoice() throws Exception {
 
+        var input = new Scanner(System.in);
         var countTry = 0;
+
         do {
-            var itemKey = Cli.inputString(CHOICE_MSG);
+            System.out.print(CHOICE_MSG);
+            var itemKey = input.nextLine();
 
             for (var item : items) {
                 if (item.getKey().equals(itemKey)) {

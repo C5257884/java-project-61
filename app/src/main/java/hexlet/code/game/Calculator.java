@@ -28,7 +28,7 @@ public final class Calculator extends AbstractGame {
 
     public Calculator() {
         super("Calc");
-        gameMainQuestion = "What is the result of the expression?";
+        setGameMainQuestion("What is the result of the expression?");
     }
 
     /**

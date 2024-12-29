@@ -1,6 +1,6 @@
 package hexlet.code.game;
 
-public class ExitGame extends AbstractGame {
+public final class ExitGame extends AbstractGame {
     public ExitGame() {
         super("Exit");
     }
@@ -21,7 +21,7 @@ public class ExitGame extends AbstractGame {
     }
 
     @Override
-    public final void play() {
+    public void play() {
 //        System.exit(0);
     }
 }

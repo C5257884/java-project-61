@@ -19,7 +19,7 @@ public final class PrimeNumber extends AbstractGame {
      */
     public PrimeNumber() {
         super("Prime");
-        gameMainQuestion = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+        setGameMainQuestion("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
     }
 
     /**
