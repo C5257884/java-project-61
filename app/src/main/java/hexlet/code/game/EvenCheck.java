@@ -1,5 +1,7 @@
 package hexlet.code.game;
 
+import java.util.Scanner;
+
 /**
  * Game Scenario.
  * <p>
@@ -23,9 +25,10 @@ public final class EvenCheck extends AbstractGame {
 
     /**
      * CONSTRUCTOR.
+     * @param input - object Scaner
      */
-    public EvenCheck() {
-        super("Even");
+    public EvenCheck(Scanner input) {
+        super("Even", input);
         setGameMainQuestion("Answer 'yes' if the number is even, otherwise answer 'no'.");
     }
 

@@ -1,5 +1,7 @@
 package hexlet.code.game;
 
+import java.util.Scanner;
+
 /**
  * Game Scenario.
  * <p>
@@ -26,8 +28,8 @@ public final class Calculator extends AbstractGame {
     private String operation;
     private String loopQuestion;
 
-    public Calculator() {
-        super("Calc");
+    public Calculator(Scanner input) {
+        super("Calc", input);
         setGameMainQuestion("What is the result of the expression?");
     }
 
@@ -46,8 +48,8 @@ public final class Calculator extends AbstractGame {
     }
 
     /**
-     * Запрос ответа пользователя на вопрос, четное или нет число.
-     * @return Введенный пользователем ответ "yes/no"
+     * Запрос ответа пользователя - "Результат операции".
+     * @return Введенный пользователем ответ
      */
     @Override
     protected String inputActualAnswer() {

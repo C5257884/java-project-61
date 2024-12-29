@@ -1,47 +1,30 @@
 package hexlet.code.game;
 
-//import hexlet.code.Cli;
+import java.util.Scanner;
 
-public class Greet extends AbstractGame {
-//    private static final String GREET_MSG = "\nWelcome to the Brain Games!";
-//    private static final String INPUT_YOUR_NAME = "May I have your name?";
-//    private static final String HELLO_MSG = "Hello, ";
+public class Greet implements Game {
+    private final Scanner input;
 
-    /**
-     * В данном классе - не используется.
-     */
-    @Override
-    protected void generateGameParams() {
-    }
-
-    /**
-     * В данном классе - не используется.
-     */
-    @Override
-    protected String getCorrectAnswer() {
-        return "";
-    }
-
-    /**
-     * В данном классе - не используется.
-     */
-    @Override
-    protected String inputActualAnswer() {
-        return "";
-    }
-
-
-    public Greet() {
-        super("Greet");
+    public Greet(Scanner input) {
+        this.input = input;
     }
 
     /**
      * A simple implementation of a greeting game.
-     * This method can be overridden to provide custom behavior for the game.
-     * When overriding, ensure that user interaction flow is preserved.
      */
     @Override
     public void play() {
-        handShake();
+
+        System.out.println("\nWelcome to the Brain Games!");
+        System.out.print("May I have your name?");
+
+        var userName = input.nextLine();
+        System.out.println("Hello, " + userName + "!");
     }
+
+    @Override
+    public String getDescription() {
+        return "Greet";
+    }
+
 }

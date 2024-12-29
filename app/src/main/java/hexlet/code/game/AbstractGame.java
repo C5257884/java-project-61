@@ -11,9 +11,6 @@ import lombok.Setter;
 @Setter
 abstract class AbstractGame implements Game {
     // Constants definition {
-    private static final String GREET_MSG = "\nWelcome to the Brain Games!";
-    private static final String INPUT_YOUR_NAME = "May I have your name?";
-    private static final String HELLO_MSG = "Hello, ";
     protected static final int MAX_VALUE = 100;
     protected static final int CORRECT_ANSWERS_THRESHOLD = 3;
     // Constants definition }
@@ -26,13 +23,12 @@ abstract class AbstractGame implements Game {
     private final Random rand;
 //    @Getter
     private final String title;
-    private String userName;
     private Scanner input;
 
-    AbstractGame(String gameTitle) {
+    AbstractGame(String gameTitle, Scanner input) {
         title = gameTitle;
         rand = new Random();
-        input = new Scanner(System.in);
+        this.input = input;
     }
 
     /**
@@ -56,10 +52,11 @@ abstract class AbstractGame implements Game {
 
     @Override
     public void play() {
-        String actualAnswer;
-        String correctAnswer;
 
-        handShake();
+        System.out.println("\nWelcome to the Brain Games!");
+        System.out.print("May I have your name?");
+        var userName = input.nextLine();
+        System.out.println("Hello, " + userName + "!");
 
         // Output main question of the Game
         System.out.println(gameMainQuestion);
@@ -68,35 +65,20 @@ abstract class AbstractGame implements Game {
 
         do {
             generateGameParams();
-            actualAnswer = inputActualAnswer();
-            correctAnswer = getCorrectAnswer();
+            var actualAnswer = inputActualAnswer();
+            var correctAnswer = getCorrectAnswer();
 
             if (actualAnswer.equals(correctAnswer)) {
                 trueAnswerCount++;
                 System.out.println("Correct!");
             } else {
-                trueAnswerCount = 0;
-                break;
+                System.out.println("'" + actualAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer
+                    + "'\nLet's try again, " + userName + "!");
+                return;
             }
         } while (trueAnswerCount < CORRECT_ANSWERS_THRESHOLD);
 
-        if (trueAnswerCount == CORRECT_ANSWERS_THRESHOLD) {
-            System.out.println("Congratulations, " + userName + "!");
-        } else {
-            System.out.println("'" + actualAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer
-                + "'\nLet's try again, " + userName + "!");
-        }
-    }
-
-    /**
-     * Greeting the user and ask for their name.
-     */
-    protected void handShake() {
-        System.out.println(GREET_MSG);
-        System.out.print(INPUT_YOUR_NAME);
-
-        userName = input.nextLine();
-        System.out.println(HELLO_MSG + userName + "!");
+        System.out.println("Congratulations, " + userName + "!");
     }
 
     @Override

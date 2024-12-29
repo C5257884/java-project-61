@@ -10,6 +10,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
+import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
@@ -30,7 +31,9 @@ class PrimeNumberTest {
                 .mapToInt(Integer::parseInt)
                 .toArray();
 
-            PrimeNumber cutGame = new PrimeNumber();
+            var input = new Scanner(System.in);
+
+            PrimeNumber cutGame = new PrimeNumber(input);
 
             Method methIsPrime;
 

@@ -1,5 +1,7 @@
 package hexlet.code.game;
 
+import java.util.Scanner;
+
 /**
  * Game Scenario.
  * <p>
@@ -16,9 +18,10 @@ public final class PrimeNumber extends AbstractGame {
 
     /**
      * CONSTRUCTOR.
+     * @param input - object Scaner
      */
-    public PrimeNumber() {
-        super("Prime");
+    public PrimeNumber(Scanner input) {
+        super("Prime", input);
         setGameMainQuestion("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
     }
 

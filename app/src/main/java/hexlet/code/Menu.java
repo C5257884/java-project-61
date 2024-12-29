@@ -1,6 +1,5 @@
 package hexlet.code;
 
-
 import java.util.Scanner;
 
 /**
@@ -12,9 +11,11 @@ public final class Menu {
     public static final String CHOICE_MSG = "Your choice: ";
     private static final int MAX_WRONG_CHOICE_NUM = 3;
     private final MenuItem[] items;
+    private final Scanner input;
 
-    public Menu(MenuItem[] menuItems) {
+    public Menu(MenuItem[] menuItems, Scanner inputScaner) {
         items = menuItems;
+        this.input = inputScaner;
     }
 
     public void showItems() {
@@ -27,7 +28,6 @@ public final class Menu {
 
     public MenuItem getUserChoice() throws Exception {
 
-        var input = new Scanner(System.in);
         var countTry = 0;
 
         do {

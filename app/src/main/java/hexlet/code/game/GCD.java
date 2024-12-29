@@ -1,5 +1,7 @@
 package hexlet.code.game;
 
+import java.util.Scanner;
+
 /**
  * Game Scenario.
  * <p>
@@ -23,8 +25,8 @@ public class GCD extends AbstractGame {
     private int operand2;
     private String loopQuestion;
 
-    public GCD() {
-        super("GCD");
+    public GCD(Scanner input) {
+        super("GCD", input);
         setGameMainQuestion("Find the greatest common divisor of given numbers.");
     }
 

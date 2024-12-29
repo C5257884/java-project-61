@@ -1,6 +1,8 @@
 package hexlet.code.game;
 
 import java.util.Random;
+import java.util.Scanner;
+
 /**
  * Game Scenario.
  * <p>
@@ -43,9 +45,10 @@ public final class Progression extends AbstractGame {
 
     /**
      * CONSTRUCTOR.
+     * @param input - object Scaner
      */
-    public Progression() {
-        super("Progression");
+    public Progression(Scanner input) {
+        super("Progression", input);
         setGameMainQuestion("What number is missing in the progression?");
     }
 
