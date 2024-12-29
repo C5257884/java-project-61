@@ -3,7 +3,7 @@ package hexlet.code.game;
 import java.util.Random;
 import java.util.Scanner;
 
-import lombok.AccessLevel;
+//import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,15 +22,14 @@ abstract class AbstractGame implements Game {
      * Текст основного вопроса игры.
      */
     @Getter
-    protected String gameMainQuestion;
-
-    @Getter(AccessLevel.PROTECTED)
-    private final Random rand;
-    @Getter
+    private String gameMainQuestion;
+    //@Getter(AccessLevel.PROTECTED)
+    protected final Random rand;
+//    @Getter
     private final String title;
     @Getter
     private String userName;
-    @Getter
+
     protected Scanner input;
 
     AbstractGame(String gameTitle) {
@@ -107,5 +106,4 @@ abstract class AbstractGame implements Game {
     public String getDescription() {
         return title;
     }
-
 }
