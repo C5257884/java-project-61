@@ -26,11 +26,11 @@ public final class Calculator extends AbstractGame {
     private int operand1;
     private int operand2;
     private String operation;
-    private String loopQuestion;
 
     public Calculator(Scanner input) {
         super("Calc", input);
         setGameMainQuestion("What is the result of the expression?");
+        tipQuestion = "Your answer: ";
     }
 
     /**
@@ -45,18 +45,6 @@ public final class Calculator extends AbstractGame {
         operand2 = getRand().nextInt(MAX_VALUE) + 1;
         operation = getOperation(getRand().nextInt(NUMBER_OF_OPERATION));
         loopQuestion = "Question: " + operand1 + " " + operation + " " + operand2;
-    }
-
-    /**
-     * Запрос ответа пользователя - "Результат операции".
-     * @return Введенный пользователем ответ
-     */
-    @Override
-    protected String inputActualAnswer() {
-
-        System.out.println(loopQuestion);
-        System.out.print("Your answer: ");
-        return getInput().nextLine();
     }
 
     /**

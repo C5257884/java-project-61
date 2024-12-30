@@ -23,6 +23,7 @@ public final class PrimeNumber extends AbstractGame {
     public PrimeNumber(Scanner input) {
         super("Prime", input);
         setGameMainQuestion("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+        tipQuestion = "Your answer (yes/no): ";
     }
 
     /**
@@ -33,19 +34,7 @@ public final class PrimeNumber extends AbstractGame {
     @Override
     protected void generateGameParams() {
         centralGameNumber = getRand().nextInt(MAX_VALUE) + 1;
-    }
-
-    /**
-     * Запрос ответа пользователя на вопрос, четное или нет число.
-     *
-     * @return Введенный пользователем ответ "yes/no"
-     */
-    @Override
-    protected String inputActualAnswer() {
-
-        System.out.println("Question: " + centralGameNumber);
-        System.out.print("Your answer (yes/no): ");
-        return getInput().nextLine();
+        loopQuestion = "Question: " + centralGameNumber;
     }
 
     /**

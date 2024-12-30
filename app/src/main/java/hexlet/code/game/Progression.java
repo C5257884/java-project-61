@@ -24,7 +24,6 @@ import java.util.Scanner;
 public final class Progression extends AbstractGame {
     private static final int LENGTH_OF_PROGRESSION = 10;
     private int indexOfMissMember;
-    private StringBuilder progressionStr;
     private ArithmeticProgression arithmeticProgression;
 
     private static class ArithmeticProgression {
@@ -50,6 +49,7 @@ public final class Progression extends AbstractGame {
     public Progression(Scanner input) {
         super("Progression", input);
         setGameMainQuestion("What number is missing in the progression?");
+        tipQuestion = "Your answer: ";
     }
 
     /**
@@ -65,7 +65,7 @@ public final class Progression extends AbstractGame {
         // При каждом вопросе - нужен новый экземпляр
         arithmeticProgression = new ArithmeticProgression();
 
-        progressionStr = new StringBuilder();
+        var progressionStr = new StringBuilder();
         String delemiterStr = "";
 
         for (int i = 1; i <= LENGTH_OF_PROGRESSION; i++) {
@@ -73,18 +73,7 @@ public final class Progression extends AbstractGame {
                 .append((i == indexOfMissMember) ? ".." : arithmeticProgression.getMember(i));
             delemiterStr = " ";
         }
-    }
-
-    /**
-     * Запрос ответа пользователя на вопрос, четное или нет число.
-     * @return Введенный пользователем ответ "yes/no"
-     */
-    @Override
-    protected String inputActualAnswer() {
-
-        System.out.println("Question: " + progressionStr);
-        System.out.print("Your answer: ");
-        return getInput().nextLine();
+        loopQuestion = "Question: " + progressionStr;
     }
 
     /**

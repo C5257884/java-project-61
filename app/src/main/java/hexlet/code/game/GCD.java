@@ -23,11 +23,12 @@ import java.util.Scanner;
 public class GCD extends AbstractGame {
     private int operand1;
     private int operand2;
-    private String loopQuestion;
+//    private String loopQuestion;
 
     public GCD(Scanner input) {
         super("GCD", input);
         setGameMainQuestion("Find the greatest common divisor of given numbers.");
+        tipQuestion = "Your answer: ";
     }
 
     /**
@@ -40,18 +41,6 @@ public class GCD extends AbstractGame {
         operand1 = getRand().nextInt(MAX_VALUE) + 1;
         operand2 = getRand().nextInt(MAX_VALUE) + 1;
         loopQuestion = "Question: " + operand1 + " " + operand2;
-    }
-
-    /**
-     * Запрос ответа пользователя.
-     * @return Наибольший Общий Делитель
-     */
-    @Override
-    protected String inputActualAnswer() {
-
-        System.out.println(loopQuestion);
-        System.out.print("Your answer: ");
-        return getInput().nextLine();
     }
 
     /**

@@ -19,6 +19,15 @@ abstract class AbstractGame implements Game {
      * Текст основного вопроса игры.
      */
     private String gameMainQuestion;
+    /**
+     * Текст вопроса, коотрый будет задаваться в цикле.
+     */
+    protected String loopQuestion;
+    /**
+     * Текст к запросу Scaner-а.
+     */
+    protected String tipQuestion;
+
     @Getter(AccessLevel.PROTECTED)
     private final Random rand;
     private final String title;
@@ -42,7 +51,12 @@ abstract class AbstractGame implements Game {
      *
      * @return the line - user answer
      */
-    protected abstract String inputActualAnswer();
+    protected String inputActualAnswer() {
+
+        System.out.println(loopQuestion);
+        System.out.print(tipQuestion);
+        return getInput().nextLine();
+    }
 
     /**
      * Установка центральных условий/параметров игры.
