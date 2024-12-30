@@ -30,7 +30,7 @@ public final class Calculator extends AbstractGame {
     public Calculator(Scanner input) {
         super("Calc", input);
         setGameMainQuestion("What is the result of the expression?");
-        tipQuestion = "Your answer: ";
+        setTipQuestion("Your answer: ");
     }
 
     /**
@@ -44,7 +44,7 @@ public final class Calculator extends AbstractGame {
         operand1 = getRand().nextInt(MAX_VALUE) + 1;
         operand2 = getRand().nextInt(MAX_VALUE) + 1;
         operation = getOperation(getRand().nextInt(NUMBER_OF_OPERATION));
-        loopQuestion = "Question: " + operand1 + " " + operation + " " + operand2;
+        setLoopQuestion("Question: " + operand1 + " " + operation + " " + operand2);
     }
 
     /**

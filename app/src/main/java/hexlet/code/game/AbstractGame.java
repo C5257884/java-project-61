@@ -22,11 +22,13 @@ abstract class AbstractGame implements Game {
     /**
      * Текст вопроса, коотрый будет задаваться в цикле.
      */
-    protected String loopQuestion;
+    @Setter(AccessLevel.PROTECTED)
+    private String loopQuestion;
     /**
      * Текст к запросу Scaner-а.
      */
-    protected String tipQuestion;
+    @Setter(AccessLevel.PROTECTED)
+    private String tipQuestion;
 
     @Getter(AccessLevel.PROTECTED)
     private final Random rand;

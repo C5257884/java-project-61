@@ -30,7 +30,7 @@ public final class EvenCheck extends AbstractGame {
     public EvenCheck(Scanner input) {
         super("Even", input);
         setGameMainQuestion("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        tipQuestion = "Your answer (yes/no): ";
+        setTipQuestion("Your answer (yes/no): ");
     }
 
     /**
@@ -41,7 +41,7 @@ public final class EvenCheck extends AbstractGame {
     @Override
     protected void generateGameParams() {
         centralGameNumber = getRand().nextInt(MAX_VALUE) + 1;
-        loopQuestion = "Question: " + centralGameNumber;
+        setLoopQuestion("Question: " + centralGameNumber);
     }
 
     /**

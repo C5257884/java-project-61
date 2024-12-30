@@ -49,7 +49,7 @@ public final class Progression extends AbstractGame {
     public Progression(Scanner input) {
         super("Progression", input);
         setGameMainQuestion("What number is missing in the progression?");
-        tipQuestion = "Your answer: ";
+        setTipQuestion("Your answer: ");
     }
 
     /**
@@ -73,7 +73,7 @@ public final class Progression extends AbstractGame {
                 .append((i == indexOfMissMember) ? ".." : arithmeticProgression.getMember(i));
             delemiterStr = " ";
         }
-        loopQuestion = "Question: " + progressionStr;
+        setLoopQuestion("Question: " + progressionStr);
     }
 
     /**

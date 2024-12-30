@@ -28,7 +28,7 @@ public class GCD extends AbstractGame {
     public GCD(Scanner input) {
         super("GCD", input);
         setGameMainQuestion("Find the greatest common divisor of given numbers.");
-        tipQuestion = "Your answer: ";
+        setTipQuestion("Your answer: ");
     }
 
     /**
@@ -40,7 +40,7 @@ public class GCD extends AbstractGame {
     protected void generateGameParams() {
         operand1 = getRand().nextInt(MAX_VALUE) + 1;
         operand2 = getRand().nextInt(MAX_VALUE) + 1;
-        loopQuestion = "Question: " + operand1 + " " + operand2;
+        setLoopQuestion("Question: " + operand1 + " " + operand2);
     }
 
     /**
